@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaList</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        
+      <!-- navbar  -->
+      <div class="navbar">
+        <span class="logo-portion"
+          ><a href="#" class="logo-text">MEDIALIST</a><img
+            src="./images/logoipsum-logo-35 (1).svg"
+            alt="logo"
+            class="logo"
+        /></span>
+        <span class="search-bar"
+          ><input type="url" placeholder="Enter Video URL" class="search" id="link" />
+        </span>
+        <button type="submit" class="add-btn" id="click-add">ADD</button>
+        
+        <!-- custom toggle switch -->
+        <div class="switch">
+            <input type="checkbox" id="toggleAll" />
+            <label for="toggleAll"></label>
+          </div>    
+    </div>
+
+      <!-- main body -->
+      <div class="main-body">
+        <div class="video-box">
+          <iframe id="video-main-box"
+            width="100%"
+            height="100%"
+            src=""
+            title="video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <button class="download-btn" id="download">
+            <span class="material-icons download-icon"> download </span>DOWNLOAD
+          </button>
+        </div>
+        <div class="videos-container">
+            
+        </div>
+        <div>
+          <button class="download-btn clear-btn" id="clear-all">
+            CLEAR ALL
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

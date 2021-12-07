@@ -1,0 +1,204 @@
+$primary-color: rgb(0,122,255);
+$font:  Arial, Helvetica, sans-serif;
+$secondary-color: rgb(49,46,203);
+
+.container {
+    margin-bottom: 100px;
+}
+.navbar {
+    width: 100%;
+    height: 40px;
+    padding-top: 15px;
+    box-shadow: rgb(230, 230, 230) 1px 1px 10px;
+
+}
+.logo {
+    position:absolute;
+    left:10px;
+    top:-2px;
+    margin: 0px 15px 15px 22px;
+    
+}
+.logo-text {
+     text-decoration: none;
+     font-family: $font;
+     position: relative;
+     left: 88px;
+     top: 5px;
+     font-weight: bold;
+     color: $secondary-color;
+     
+}
+.logo-portion {
+    position: absolute;
+    left: 10px;
+    transition: left ease 0.3s;
+    &:hover {
+        left: -5px;
+    }
+    cursor: pointer;
+    width: 200px;
+    height:35px;
+}
+.search-bar {
+     border-radius: 22px;
+    //  border: 1px solid rgb(44, 44, 44);
+     box-shadow: rgb(223, 221, 221) 1px 1px 5px;
+     padding: 10px;
+     margin-left: 30%;     
+}
+.search {
+    border-style: none;
+    font-size: 10pt;
+    font-family: $font;
+    width: 500px;
+    &:focus {
+            outline: none;
+            
+    }
+    
+}
+.add-btn {
+    padding: 5px;
+    margin-left: 8px;
+    border-radius: 22px;
+    width: 85px;
+    border-style: solid;
+    border-color: $primary-color;
+    color: $primary-color;
+    background-color: white;
+    cursor: pointer;
+    &:hover{
+        background-color: $primary-color;
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+}
+// toggle switch 
+.switch {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    left: 100px;
+    top: -3px;
+    
+  }
+  .switch input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  .switch input[type=checkbox]:checked + label {
+    background: rgb(53, 53, 53);
+  }
+  .switch input[type=checkbox]:checked + label::after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+  .switch label {
+    cursor: pointer;
+    width: 48px;
+    height: 24px;
+    background: rgb(211, 211, 211);
+    display: block;
+    border-radius: 24px;
+    position: relative;
+  }
+  .switch label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 15px;
+    transition: 0.5s;
+  }
+// main body
+.main-body {
+    margin-top: -42px;
+}
+.video-box {
+    width: 800px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 45px;
+}
+.download-icon {
+    position: relative;
+    top: 2px;
+}
+.download-btn {
+    font-family: $font;
+    border-radius: 22px;
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 3px;
+    background-color: $primary-color;
+    color: white;
+    &:hover{
+        box-shadow: $primary-color 0.5px 0.5px 10px;
+        transition: 0.5s ease-in-out;
+    }
+}
+.clear-btn {
+    margin-left: auto;
+    margin-right: 13%;
+    margin-top: 20px;
+    background-color: rgb(221, 59, 59);
+    padding: 7px 7px 7px 7px;
+    &:hover{
+        box-shadow: rgb(221, 59, 59) 0.5px 0.5px 10px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.videos-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    box-shadow: rgb(197, 197, 197) 1px 1px 5px;
+    width: 30%;
+    max-height: 450px;
+    min-height: 450px;
+    flex: 1;
+    margin-left: auto;
+    margin-top: -450px;
+    margin-right: 20px;
+    
+}
+#mini-frame {
+    margin: 10px auto;
+    width: 90%;
+    height: 40vh;
+}
+// -----------
+/* width */
+.videos-container::-webkit-scrollbar {
+    width: 10px;
+  
+}
+  
+  
+  /* Track */
+  .videos-container::-webkit-scrollbar-track {
+    background: #b6afaf;
+    
+  }
+  
+  /* Handle */
+  .videos-container::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 20px;
+}
+  
+  /* Handle on hover */
+  .videos-container::-webkit-scrollbar-thumb:hover {
+    background: $primary-color;
+  }
